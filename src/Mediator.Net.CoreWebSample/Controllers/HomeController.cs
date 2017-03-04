@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Mediator.Net.SampleLib.Messages.Commands;
 using Mediator.Net.SampleLib.Messages.Requests;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,8 +16,9 @@ namespace Mediator.Net.CoreWebSample.Controllers
         {
             _mediator = mediator;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            await _mediator.SendAsync(new DoSomeWorkCommand());
             return View();
         }
 
