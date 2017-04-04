@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Mediator.Net" Version="1.0.65" />
-    <PackageReference Include="Mediator.Net.Autofac" Version="1.0.72" />
+    <PackageReference Include="Mediator.Net.Autofac" Version="1.1.6" />
   </ItemGroup>
 
 </Project>
