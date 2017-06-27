@@ -34,7 +34,7 @@ namespace Mediator.Net.CoreWebSample
             services.AddMvc();
 
             var builder = new ContainerBuilder();
-
+            builder.RegisterInstance(Configuration).AsImplementedInterfaces().SingleInstance();
             builder.RegisterModule<LibAutofacModule>();
             // Register dependencies, populate the services from
             // the collection, and build the container. If you want

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Mediator.Net.SampleLib.Messages.Commands;
 using Mediator.Net.SampleLib.Messages.Requests;
 using Microsoft.AspNetCore.Mvc;
