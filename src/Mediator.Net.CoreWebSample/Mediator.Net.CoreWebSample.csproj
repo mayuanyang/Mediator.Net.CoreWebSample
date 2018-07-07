@@ -7,7 +7,6 @@
     <OutputType>Exe</OutputType>
     <PackageId>Mediator.Net.CoreWebSample</PackageId>
     <RuntimeFrameworkVersion>1.0.4</RuntimeFrameworkVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;portable-net45+win8</PackageTargetFallback>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
@@ -35,7 +34,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="1.1.2" />
     <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.1.2" />
-    <PackageReference Include="Mediator.Net.Autofac" Version="1.1.7" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.1.0" />
   </ItemGroup>
 

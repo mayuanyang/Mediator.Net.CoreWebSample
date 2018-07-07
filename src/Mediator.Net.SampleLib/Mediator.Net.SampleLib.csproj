@@ -4,16 +4,13 @@
     <TargetFramework>netstandard1.6</TargetFramework>
     <AssemblyName>Mediator.Net.SampleLib</AssemblyName>
     <PackageId>Mediator.Net.SampleLib</PackageId>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-    <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mediator.Net" Version="1.1.3" />
-    <PackageReference Include="Mediator.Net.Autofac" Version="1.1.7" />
+    <PackageReference Include="Mediator.Net.Autofac" Version="2.0.0.1-dev1" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
   </ItemGroup>
 

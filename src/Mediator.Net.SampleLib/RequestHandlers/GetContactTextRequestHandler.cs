@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Mediator.Net.Context;
 using Mediator.Net.Contracts;
 using Mediator.Net.SampleLib.Messages.Requests;
@@ -13,7 +14,7 @@ namespace Mediator.Net.SampleLib.RequestHandlers
         {
             _service = service;
         }
-        public async Task<GetContactTextResponse> Handle(ReceiveContext<GetContactTextRequest> context)
+        public async Task<GetContactTextResponse> Handle(ReceiveContext<GetContactTextRequest> context, CancellationToken cancellationToken)
         {
             var text = await _service.GetContactText();
             return new GetContactTextResponse(text);

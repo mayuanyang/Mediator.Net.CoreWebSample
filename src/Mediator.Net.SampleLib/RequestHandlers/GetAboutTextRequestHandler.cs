@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Mediator.Net.Context;
 using Mediator.Net.Contracts;
 using Mediator.Net.SampleLib.Messages.Requests;
@@ -14,7 +15,7 @@ namespace Mediator.Net.SampleLib.RequestHandlers
         {
             _configuration = configuration;
         }
-        public Task<GetAboutTextResponse> Handle(ReceiveContext<GetAboutTextRequest> context)
+        public Task<GetAboutTextResponse> Handle(ReceiveContext<GetAboutTextRequest> context, CancellationToken cancellationToken)
         {
             var dummy = _configuration.GetSection("DummyConnectionString").Value;
             return Task.FromResult(new GetAboutTextResponse(dummy));
