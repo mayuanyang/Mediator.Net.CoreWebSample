@@ -5,3 +5,10 @@
 <h3>@ViewData["Message"]</h3>
 
 <p>Use this area to provide additional information.</p>
+
+<div>
+    @using (Html.BeginForm("Cancel", "Home", FormMethod.Post))
+    {
+        <input type="submit" value="Submit a cancel request" />
+    }
+</div>

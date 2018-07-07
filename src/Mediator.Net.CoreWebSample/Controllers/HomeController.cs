@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Threading;
+using System.Threading.Tasks;
 using Mediator.Net.SampleLib.Messages.Commands;
 using Mediator.Net.SampleLib.Messages.Requests;
 using Microsoft.AspNetCore.Mvc;
@@ -34,6 +35,18 @@ namespace Mediator.Net.CoreWebSample.Controllers
             ViewData["Message"] = response.Text;
 
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Cancel()
+        {
+            CancellationTokenSource cts = new CancellationTokenSource();
+            CancellationToken token = cts.Token;
+            cts.Cancel();
+            var response = await _mediator.RequestAsync<GetAboutTextRequest, GetAboutTextResponse>(new GetAboutTextRequest(), token);
+            ViewData["Message"] = response.Text;
+
+            return View("About");
         }
 
         public IActionResult Error()

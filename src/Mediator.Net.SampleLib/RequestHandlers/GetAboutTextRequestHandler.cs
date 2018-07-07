@@ -17,6 +17,8 @@ namespace Mediator.Net.SampleLib.RequestHandlers
         }
         public Task<GetAboutTextResponse> Handle(ReceiveContext<GetAboutTextRequest> context, CancellationToken cancellationToken)
         {
+            if (cancellationToken.IsCancellationRequested)
+                return Task.FromResult(new GetAboutTextResponse("Request is cancelled"));
             var dummy = _configuration.GetSection("DummyConnectionString").Value;
             return Task.FromResult(new GetAboutTextResponse(dummy));
         }

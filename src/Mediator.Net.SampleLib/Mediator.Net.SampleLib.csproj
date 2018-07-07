@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Mediator.Net.Autofac" Version="2.0.0.1-dev1" />
+    <PackageReference Include="Mediator.Net.Autofac" Version="2.0.0.3-dev3" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
   </ItemGroup>
 
